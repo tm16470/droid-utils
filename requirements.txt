@@ -1,0 +1,5 @@
+pywinctl
+pyautogui
+logzero
+tqdm
+psutil

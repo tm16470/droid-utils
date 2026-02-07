@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "droid-utils"
+version = "0.1.0"
+description = "ADB & scrcpy automation toolkit"
+authors = [
+  {name = "Your Name", email = "your@email.com"}
+]
+dependencies = [
+  "pywinctl",
+  "pyautogui",
+  "logzero",
+  "tqdm",
+  "psutil"
+]
+
+[project.scripts]
+droid-open = "app.open:main"
+droid-align = "app.align:main"
+droid-swipe = "app.swipe:main"
+droid-recover = "app.recover:main"

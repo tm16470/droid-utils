@@ -1,0 +1,27 @@
+# Enable device as a user device if found
+ENV{adb_user}=="yes", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+
+# [Sony] docomo SO-53C (Android 14)
+# [Sony] KDDI SOG08 (Android 14)
+SUBSYSTEM=="usb", ATTR{idVendor}=="0fce", ATTR{idProduct}=="320e", MODE="0666", GROUP="plugdev"
+
+# [Blackview] Blackview WAVE 6C (Android 13)
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4ee8", MODE="0666", GROUP="plugdev"
+
+# [OPPO] OPPO A402OP (Android 15)
+SUBSYSTEM=="usb", ATTR{idVendor}=="22d9", ATTR{idProduct}=="2769", MODE="0666", GROUP="plugdev"
+
+# [FCNT] FCNT F-52E (Android 14)
+SUBSYSTEM=="usb", ATTR{idVendor}=="30ee", ATTR{idProduct}=="1159", MODE="0666", GROUP="plugdev"
+
+# [FCNT] FCNT FCG02 (Android 14)
+SUBSYSTEM=="usb", ATTR{idVendor}=="30ee", ATTR{idProduct}=="1165", MODE="0666", GROUP="plugdev"
+
+# ID 30ee:1171 Fujitsu Connected Technologies Limited A402FC
+SUBSYSTEM=="usb", ATTR{idVendor}=="30ee", ATTR{idProduct}=="1171", MODE="0666", GROUP="plugdev"
+
+# 18d1:4ee7 Google Inc. Nexus/Pixel Device (charging + debug)
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4ee7", MODE="0666", GROUP="plugdev"
+
+# Bus 005 Device 087: ID 0489:c043 Foxconn / Hon Hai SH-52E
+SUBSYSTEM=="usb", ATTR{idVendor}=="0489", ATTR{idProduct}=="c043", MODE="0666", GROUP="plugdev"
